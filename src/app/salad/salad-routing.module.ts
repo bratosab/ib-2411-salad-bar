@@ -4,7 +4,7 @@ import { SaladComponent } from './salad.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'salad',
     component: SaladComponent
   }
 ];

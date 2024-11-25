@@ -1,1 +1,15 @@
+<mat-toolbar>
+    <button mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Best Salad Bar</span>
+    <span class="spacer"></span>
+    <button mat-icon-button>
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button [routerLink]="['kitchen']">
+      <mat-icon>kitchen</mat-icon>
+    </button>
+  </mat-toolbar>
+
 <router-outlet />

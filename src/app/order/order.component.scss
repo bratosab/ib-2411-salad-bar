@@ -1,0 +1,11 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}

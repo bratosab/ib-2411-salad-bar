@@ -1,11 +1,20 @@
-<form [formGroup]="orderForm">
-  <mat-form-field>
+<form [formGroup]="orderForm" (ngSubmit)="startOrder()">
+  <mat-form-field appearance="outline">
     <mat-label>Name</mat-label>
     <input matInput formControlName="name" />
+    <mat-error>Please enter your name</mat-error>
   </mat-form-field>
 
-  <mat-form-field>
+  <mat-form-field appearance="outline">
     <mat-label>Tel</mat-label>
     <input matInput formControlName="tel" />
+    <mat-error *ngIf="telControl?.hasError('required')"
+      >Please enter a phone number</mat-error
+    >
+    <mat-error *ngIf="telControl?.hasError('pattern')"
+      >Please enter a valid phone number</mat-error
+    >
   </mat-form-field>
+
+  <button type="submit" mat-raised-button>Start Order !</button>
 </form>

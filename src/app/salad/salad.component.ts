@@ -21,4 +21,8 @@ export class SaladComponent implements OnInit {
     // })
   }
 
+  selectTopping(topping: Topping) {
+    console.log(topping)
+  }
+
 }

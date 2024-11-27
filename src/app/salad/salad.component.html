@@ -5,11 +5,14 @@
     {{ topping.name }} ({{ topping.price | currency : "€" }})
   </li>
 </ul> -->
+<div class="columns">
+  <app-toppings
+    *ngIf="toppings$ | async as toppings; else loading"
+    [toppings]="toppings"
+    (selectTopping)="selectTopping($event)"
+  ></app-toppings>
 
-<app-toppings
-  *ngIf="toppings$ | async as toppings; else loading"
-  [toppings]="toppings"
-  (selectTopping)="selectTopping($event)"
-></app-toppings>
+  <ng-template #loading> Loading toppings... </ng-template>
 
-<ng-template #loading> Loading toppings... </ng-template>
+  <app-ingredients></app-ingredients>
+</div>

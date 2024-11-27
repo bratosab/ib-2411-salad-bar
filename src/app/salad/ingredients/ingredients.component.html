@@ -1,0 +1,9 @@
+@for (ingredient of saladService.chosenToppings(); track ingredient.id) {
+    <div class="ingredient">
+      <span>{{ ingredient.name }} ({{ ingredient.price | currency:'€' }})</span>
+      <button (click)="removeIngredient(ingredient.id)">-</button>
+    </div>
+  }
+  @empty {
+    <p>No ingredients available. Add some!</p>
+  }

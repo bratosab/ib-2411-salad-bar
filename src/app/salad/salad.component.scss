@@ -1,0 +1,9 @@
+.columns {
+    display: flex;
+    flex-direction: row;
+    padding: 12px;
+
+    app-toppings {
+        width: 400px;
+    }
+}

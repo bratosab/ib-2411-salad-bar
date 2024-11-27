@@ -6,14 +6,14 @@ import { Topping } from '../models/topping.model';
 @Component({
   selector: 'app-salad',
   templateUrl: './salad.component.html',
-  styleUrl: './salad.component.scss'
+  styleUrl: './salad.component.scss',
 })
 export class SaladComponent implements OnInit {
-  orderService = inject(OrderService)
-  saladService = inject(SaladService)
+  orderService = inject(OrderService);
+  saladService = inject(SaladService);
 
   // toppings: Topping[] = []
-  toppings$ = this.saladService.getToppings()
+  toppings$ = this.saladService.getToppings();
 
   ngOnInit(): void {
     // this.saladService.getToppings().subscribe(t => {
@@ -22,7 +22,6 @@ export class SaladComponent implements OnInit {
   }
 
   selectTopping(topping: Topping) {
-    console.log(topping)
+    this.saladService.chooseTopping(topping);
   }
-
 }

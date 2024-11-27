@@ -2,7 +2,12 @@
   [multiple]="false"
   (selectionChange)="chooseTopping($event)"
 >
-  <mat-list-option *ngFor="let topping of toppings" [value]="topping">
+  <!-- <mat-list-option *ngFor="let topping of toppings" [value]="topping">
+    {{ topping.name }} ({{ topping.price | currency : "€" }})
+  </mat-list-option> -->
+  @for (topping of toppings; track topping.id) {
+  <mat-list-option [value]="topping">
     {{ topping.name }} ({{ topping.price | currency : "€" }})
   </mat-list-option>
+  }
 </mat-selection-list>

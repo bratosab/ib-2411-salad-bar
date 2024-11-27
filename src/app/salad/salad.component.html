@@ -6,13 +6,21 @@
   </li>
 </ul> -->
 <div class="columns">
+  @if(toppings$ | async; as toppings){
   <app-toppings
-    *ngIf="toppings$ | async as toppings; else loading"
     [toppings]="toppings"
     (selectTopping)="selectTopping($event)"
   ></app-toppings>
+  } @else { Loading toppings... }
+  
+  
+  <!-- <app-toppings
+    *ngIf="toppings$ | async as toppings; else loading"
+    [toppings]="toppings"
+    (selectTopping)="selectTopping($event)"
+  ></app-toppings> -->
 
-  <ng-template #loading> Loading toppings... </ng-template>
+  <!-- <ng-template #loading> Loading toppings... </ng-template> -->
 
   <app-ingredients></app-ingredients>
 </div>

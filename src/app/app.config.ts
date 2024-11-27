@@ -1,6 +1,4 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
-import { SaladRoutingModule } from './salad/salad-routing.module';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHttpClient } from '@angular/common/http';
 import { provideRouter } from '@angular/router';

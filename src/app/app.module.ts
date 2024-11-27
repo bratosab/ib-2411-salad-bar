@@ -11,21 +11,19 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    OrderComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    SharedMaterialModule,
-    SaladModule
-  ],
-  providers: [
-    provideAnimationsAsync(),
-    provideHttpClient()
-  ],
-  bootstrap: [AppComponent]
+    declarations: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        SharedMaterialModule,
+        SaladModule,
+        OrderComponent
+    ],
+    providers: [
+        provideAnimationsAsync(),
+        provideHttpClient()
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,11 +1,14 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Topping } from '../../models/topping.model';
-import { MatSelectionListChange } from '@angular/material/list';
+import { MatSelectionListChange, MatSelectionList, MatListOption } from '@angular/material/list';
+import { CurrencyPipe } from '@angular/common';
 
 @Component({
-  selector: 'app-toppings',
-  templateUrl: './toppings.component.html',
-  styleUrl: './toppings.component.scss'
+    selector: 'app-toppings',
+    templateUrl: './toppings.component.html',
+    styleUrl: './toppings.component.scss',
+    standalone: true,
+    imports: [MatSelectionList, MatListOption, CurrencyPipe]
 })
 export class ToppingsComponent {
   @Input()

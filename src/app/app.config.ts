@@ -8,12 +8,13 @@ import { withNgxsReduxDevtoolsPlugin } from '@ngxs/devtools-plugin';
 import { withNgxsRouterPlugin } from '@ngxs/router-plugin';
 import { provideStore } from '@ngxs/store';
 import { OrderState } from './store/order.state';
+import { SaladState } from './salad/store/salad.state';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideAnimationsAsync(),
     provideHttpClient(),
     provideRouter([...appRoutes, ...saladRoutes]),
-    provideStore([OrderState], withNgxsReduxDevtoolsPlugin(), withNgxsRouterPlugin()),
+    provideStore([OrderState, SaladState], withNgxsReduxDevtoolsPlugin(), withNgxsRouterPlugin()),
   ],
 };

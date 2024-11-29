@@ -1,6 +1,6 @@
 <div>Total price : {{ saladService.totalPrice() | currency:'€'  }}</div>
 
-@for (ingredient of saladService.chosenToppings(); track ingredient.id) {
+@for (ingredient of chosenToppings(); track ingredient.id) {
     <div class="ingredient">
       <span>{{ ingredient.name }} ({{ ingredient.price | currency:'€' }})</span>
       <button (click)="removeIngredient(ingredient.id)">-</button>

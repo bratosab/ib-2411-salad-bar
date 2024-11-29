@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { SaladService } from '../../services/salad.service';
 import { CurrencyPipe } from '@angular/common';
 import { Store } from '@ngxs/store';
-import { SaladStateModel } from '../store/salad.state';
+import { SaladState, SaladStateModel } from '../store/salad.state';
 
 @Component({
   selector: 'app-ingredients',
@@ -18,6 +18,7 @@ export class IngredientsComponent {
   chosenToppings = this.store.selectSignal<SaladStateModel['chosenToppings']>(
     (state) => state.salad.chosenToppings
   );
+  totalPrice = this.store.selectSignal<number>(SaladState.getTotalPrice)
 
   removeIngredient(id: number) {
     this.saladService.removeTopping(id);

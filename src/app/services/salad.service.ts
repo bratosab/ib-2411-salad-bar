@@ -23,6 +23,11 @@ export class SaladService {
     return this.chosenToppingList.asReadonly();
   }
 
+  /**
+   * chooseTopping
+   * @param topping 
+   * @deprecated
+   */
   chooseTopping(topping: Topping) {
     this.chosenToppingList.update((list) => [...list, topping]);
     // this.chosenToppingList.update((list) => {
@@ -32,6 +37,11 @@ export class SaladService {
     // })
   }
 
+  /**
+   * removeTopping
+   * @param id 
+   * @deprecated
+   */
   removeTopping(id: number) {
     this.chosenToppingList.update((list) =>
       list.filter((topping) => topping.id !== id)

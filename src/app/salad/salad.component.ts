@@ -25,11 +25,9 @@ export class SaladComponent implements OnInit {
   name = this.store.selectSignal<OrderStateModel['name']>(
     (state) => state.order.name
   );
-
   name$ = this.store.select<OrderStateModel['name']>(
     (state) => state.order.name
   );
-
   nameSnapshot = this.store.selectSnapshot<OrderStateModel['name']>(
     (state) => state.order.name
   );

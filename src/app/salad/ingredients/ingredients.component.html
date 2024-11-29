@@ -1,4 +1,4 @@
-<div>Total price : {{ saladService.totalPrice() | currency:'€'  }}</div>
+<div>Total price : {{ totalPrice() | currency:'€'  }}</div>
 
 @for (ingredient of chosenToppings(); track ingredient.id) {
     <div class="ingredient">

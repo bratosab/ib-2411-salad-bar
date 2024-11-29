@@ -13,4 +13,8 @@ describe('OrderService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should be working', () => {
+    expect(service.dosomething()).toBe('it worked');
+  });
 });

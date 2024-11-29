@@ -11,4 +11,8 @@ export class OrderService {
   tel = signal<string>('')
 
   constructor() { }
+
+  dosomething( ) {
+    return "it worked"
+  }
 }
